@@ -1,0 +1,123 @@
+/* Semt Pazar Alanları — mağaza kaydı için yayınlanan yasal sayfaların stili.
+   Uygulamanın paletiyle aynı: yeşil marka rengi, krem zemin, ahşap-turuncu aksan. */
+
+:root {
+  --yesil: #2e7d32;
+  --yesil-canli: #43a047;
+  --koyu-yesil: #14301f;
+  --turuncu: #e2792e;
+  --krem: #f6f2e7;
+  --zemin: #fcf6e9;
+  --metin: #1c2620;
+  --soluk: #5c6b62;
+  --kenar: #ddd6c4;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --zemin: #0e1d14;
+    --krem: #17321f;
+    --metin: #e8efe9;
+    --soluk: #9aa79e;
+    --kenar: #24422e;
+    --yesil: #7cc47f;
+  }
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--zemin);
+  color: var(--metin);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+  line-height: 1.65;
+  -webkit-text-size-adjust: 100%;
+}
+
+.sarmal {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 32px 20px 64px;
+}
+
+header.ust {
+  border-bottom: 1px solid var(--kenar);
+  padding-bottom: 20px;
+  margin-bottom: 28px;
+}
+
+header.ust .marka {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 700;
+  color: var(--yesil);
+  text-decoration: none;
+  font-size: 1.05rem;
+}
+
+h1 {
+  font-size: 1.75rem;
+  line-height: 1.25;
+  margin: 18px 0 6px;
+}
+
+h2 {
+  font-size: 1.15rem;
+  margin: 32px 0 8px;
+  color: var(--yesil);
+}
+
+.tarih {
+  color: var(--soluk);
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+p { margin: 0 0 14px; }
+
+a { color: var(--yesil); }
+
+.kutu {
+  background: var(--krem);
+  border: 1px solid var(--kenar);
+  border-radius: 14px;
+  padding: 16px 18px;
+  margin: 24px 0;
+}
+
+.kutu.vurgu {
+  border-color: var(--turuncu);
+  background: color-mix(in srgb, var(--turuncu) 8%, var(--krem));
+}
+
+.baglantilar {
+  list-style: none;
+  padding: 0;
+  margin: 24px 0 0;
+}
+
+.baglantilar li { margin-bottom: 10px; }
+
+.baglantilar a {
+  display: block;
+  padding: 14px 16px;
+  background: var(--krem);
+  border: 1px solid var(--kenar);
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.baglantilar a:hover { border-color: var(--yesil); }
+
+footer {
+  margin-top: 48px;
+  padding-top: 20px;
+  border-top: 1px solid var(--kenar);
+  color: var(--soluk);
+  font-size: 0.85rem;
+}
